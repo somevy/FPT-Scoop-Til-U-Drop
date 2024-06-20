@@ -134,7 +134,7 @@ class IceCream(pygame.sprite.Sprite):
             self.pos.y = self.cone.pos.y - self.cone.rect.height - self.yDisplacement
             self.pos.x += self.cone.vel.x + 0.5 * self.cone.acc.x
 
-            # Ice cream will stay within the bordrs
+            # Ice cream will stay within the borders
             if self.pos.x > self.border[1]:
                 self.pos.x = self.border[1]
             if self.pos.x < self.border[0]:
