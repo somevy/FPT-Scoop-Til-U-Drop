@@ -8,7 +8,7 @@
 # Updated:     05-June-2024
 #-----------------------------------------------------------------------------
 import pygame, random, math, os, json
-from pygame.locals import *
+# from pygame.locals import *
 
 # Importing classes
 from cone import Cone
@@ -256,21 +256,23 @@ def main():
     --------------------------------------------
     Loading sounds
     '''
+    sourceFileDir = os.path.dirname(os.path.abspath(__file__))
+
     # Source - https://www.youtube.com/watch?v=S505bwxigRY 
     # Rustboro City (Pokemon Omega Ruby & Alpha Sapphire) by Chippy Bits
-    mainAudio = pygame.mixer.Sound("audio/main.mp3")
+    mainAudio = pygame.mixer.Sound(os.path.join(sourceFileDir, "audio/main.mp3"))
 
     # Source - https://www.youtube.com/watch?v=eXH_-Ys3AUs
     # theme of a shop that sells things you dont want by Azali
-    shopAudio = pygame.mixer.Sound("audio/shop.mp3")
+    shopAudio = pygame.mixer.Sound(os.path.join(sourceFileDir, "audio/shop.mp3"))
 
     # Source - https://youtu.be/v9kuoBl85oY?si=qmLTjcXX5APwwn3O
     # Battle! - Put Some Love Into It by Pedro Silva
-    game0Audio = pygame.mixer.Sound("audio/game0.mp3")
+    game0Audio = pygame.mixer.Sound(os.path.join(sourceFileDir, "audio/game0.mp3"))
 
     # Source - https://youtu.be/dGF7HN1LL68?si=tGGBP4BgsSreWABx
     # Battle! - Greens by Pedro Silva
-    game1Audio = pygame.mixer.Sound("audio/game1.mp3")
+    game1Audio = pygame.mixer.Sound(os.path.join(sourceFileDir, "audio/game1.mp3"))
 
     pygame.mixer.Channel(0).play(mainAudio, -1) # Plays the song infinitely
 
@@ -280,8 +282,6 @@ def main():
     --------------------------------------------
     Loading images
     '''
-    sourceFileDir = os.path.dirname(os.path.abspath(__file__))
-
     iconImg = pygame.image.load(os.path.join(sourceFileDir, "images/cream/creamSkin1", "IceCream10.png"))
     pygame.display.set_icon(iconImg)
 
@@ -492,7 +492,7 @@ def main():
     try:
         with open('data.json') as load_file:
             data = json.load(load_file)
-    except:
+    except FileNotFoundError:
         with open('data.json','w') as store_file:
             json.dump(data,store_file)
 
