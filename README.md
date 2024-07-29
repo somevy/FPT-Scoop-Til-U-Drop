@@ -1,10 +1,8 @@
 # Scoop Til' U Drop
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/watch?v=4Uj47QBpfo8" 
-frameborder="0" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
+[⬇️ Game Trailer ⬇️](https://www.youtube.com/watch?v=4Uj47QBpfo8)
+
+[![Game Trailer](https://i9.ytimg.com/vi/4Uj47QBpfo8/mqdefault.jpg?v=66a69f92&sqp=CJDTm7UG&rs=AOn4CLDnczacHvwRpQK2ewGgy2gNm2D9aA)](https://www.youtube.com/watch?v=4Uj47QBpfo8)
 
 - Pre-req: Python and pip tool
 - Install pygame in CLI (PowerShell or CommandPrompt)
